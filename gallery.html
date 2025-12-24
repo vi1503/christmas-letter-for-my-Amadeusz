@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Our Memories 💚</title>
+
+  <!-- Classic letter font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 40px;
+      font-family: 'Playfair Display', serif;
+      background: linear-gradient(135deg, #eaf7ee, #f3eefe);
+      color: #1f4d2b;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    p {
+      max-width: 700px;
+      margin: 0 auto 40px;
+      font-size: 18px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 40px;
+      text-decoration: none;
+      color: white;
+      background: #2f6f44;
+      padding: 12px 22px;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Our Memories 💚</h1>
+  <p>
+    From childhood dreams, long-distance days,  
+    to moments where distance disappeared and love stayed.
+  </p>
+
+  <div class="gallery">
+    <img src="images/photo1.jpg" alt="Us together">
+    <img src="images/photo2.jpg" alt="Our moment">
+    <img src="images/photo3.jpg" alt="Memory">
+    <img src="images/photo4.jpg" alt="Love">
+  </div>
+
+  <a href="index.html">← Back to Letter</a>
+
+</body>
+</html>
