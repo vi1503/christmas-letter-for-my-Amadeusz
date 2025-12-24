@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Merry Christmas 💗</title>
+
+<style>
+body {
+    margin: 0;
+    background: linear-gradient(#0f766e, #042f2e);
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* ❄️ Snow */
+.snow {
+    position: fixed;
+    top: -10px;
+    color: white;
+    font-size: 14px;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to { transform: translateY(110vh); }
+}
+
+/* 💌 Envelope */
+.envelope {
+    width: 320px;
+    height: 200px;
+    background: #fef3c7;
+    margin: auto;
+    margin-top: 30vh;
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    transition: transform 0.6s;
+}
+
+.envelope:hover {
+    transform: scale(1.05);
+}
+
+.flap {
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-left: 160px solid transparent;
+    border-right: 160px solid transparent;
+    border-bottom: 100px solid #fde68a;
+}
+
+.label {
+    text-align: center;
+    padding-top: 120px;
+    font-weight: bold;
+    color: #92400e;
+}
+
+/* 💗 Letter Card */
+.card {
+    display: none;
+    background: white;
+    max-width: 650px;
+    padding: 40px;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 8vh;
+    text-align: center;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+}
+
+h1 {
+    color: #b91c1c;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #374151;
+}
+
+.signature {
+    margin-top: 30px;
+    font-weight: bold;
+    color: #065f46;
+}
+</style>
+</head>
+
+<body>
+
+<!-- 💌 Envelope -->
+<div class="envelope" onclick="openLetter()">
+    <div class="flap"></div>
+    <div class="label">Click to open 💌</div>
+</div>
+
+<!-- 💗 Letter -->
+<div class="card" id="letter">
+    <h1>Merry Christmas, Amadeusz 🎄</h1>
+
+    <p><strong>Merry Christmas, my Amadeusz 🎄</strong></p>
+
+    <p>
+    Spending my second Christmas with you already feels so special, my love so sweet 😘
+    Looking back, 2025 has been a beautiful and meaningful year for us.
+    It's a year filled with milestones, growth, love, and lessons.
+    I started this year with my lovely man, and my heart has been full ever since.
+    </p>
+
+    <p>
+    You were my constant motivation when I felt tired, unsure, or overwhelmed.
+    You have always been my number one support system, and I will forever be grateful for that 😘🥰
+    </p>
+
+    <p>
+    June and July will never be remembered by me just as the peak of the rainy season 😉
+    They will always be remembered as the months when my heart felt the warmest because of our honeymoon.
+    </p>
+
+    <p>
+    The moment I saw you at the airport, there was no rush of overwhelming emotions,
+    no nervousness — just peace and comfort.
+    And when you hugged me for the first time… my love, it truly felt like home.
+    </p>
+
+    <p>
+    Our first night being side by side is one of the most precious nights of my life.
+    </p>
+
+    <p>
+    It was passionate.<br>
+    It was intimate.<br>
+    And it was pure, sweet, and full of respect.
+    </p>
+
+    <p>
+    In that moment, I realized I could love you even more than I already did 😌🤭
+    </p>
+
+    <p>
+    Seeing you sleep peacefully beside me every morning melted my heart in ways I can’t explain.
+    You are the sweetest and most genuine man I’ve ever known,
+    and I want to wake up to that face for the rest of my life, baby 😊
+    </p>
+
+    <p>
+    Our honeymoon was the best month of my life so far.
+    </p>
+
+    <p>
+    We walked through chaotic cities.
+    We explored the flowing waters of the Agos River and felt the rain in the mountains of Sierra Madre.
+    We flew across islands and blue skies, dived into clear seas,
+    and embraced the quiet silence of the mountains in my hometown.
+    </p>
+
+    <p>
+    Every place felt more beautiful because I was with you.
+    </p>
+
+    <p>
+    This year wasn’t easy for us either.
+    </p>
+
+    <p>
+    We faced personal battles we needed to win on our own.
+    There were plans that led to misunderstandings,
+    moments when emotions ran high,
+    and fights that tested our patience and love.
+    </p>
+
+    <p>
+    But despite all that, we stayed.
+    We chose to understand, to communicate, and to grow… together.
+    And I believe that’s what truly matters.
+    </p>
+
+    <p>
+    As I look forward, my love, I feel hopeful and excited.
+    </p>
+
+    <p>
+    I look forward to a future where we finally close the distance,
+    where goodbyes turn into everyday hellos,
+    and where love no longer has to rely on screens and time zones 🥺
+    </p>
+
+    <p>
+    I look forward to building a life with you…
+    one step, one plan, one dream at a time.
+    </p>
+
+    <p>
+    Please always remember this:
+    </p>
+
+    <p>
+    I love you deeply.<br>
+    I love you genuinely.<br>
+    I love you even on the hard days.
+    </p>
+
+    <p>
+    Thank you for being my safe place, my partner, my home…
+    even from miles away.
+    </p>
+
+    <p><strong>Merry Christmas, my love so sweet! 🎄💗</strong></p>
+
+    <p class="signature">
+    — Your wifey, cookie, cattie<br>
+    Baby Vi 😘
+    </p>
+</div>
+
+<script>
+function openLetter() {
+    document.querySelector(".envelope").style.display = "none";
+    document.getElementById("letter").style.display = "block";
+    startSnow();
+    console.log(
+        "%cMerry Christmas 💗\nThis card was coded with love by Via.",
+        "color:#b91c1c;font-size:16px;font-weight:bold;"
+    );
+}
+
+function startSnow() {
+    for (let i = 0; i < 60; i++) {
+        let snow = document.createElement("div");
+        snow.className = "snow";
+        snow.innerHTML = "❄️";
+        snow.style.left = Math.random() * 100 + "vw";
+        snow.style.animationDuration = (5 + Math.random() * 6) + "s";
+        snow.style.opacity = Math.random();
+        document.body.appendChild(snow);
+    }
+}
+  let secret = "";
+document.addEventListener("keydown", (e) => {
+    secret += e.key.toLowerCase();
+    if (secret.includes("love")) {
+        console.log(
+            "%cYou found the secret 💗\nI love you always — Via",
+            "color:#065f46;font-size:18px;font-weight:bold;"
+        );
+        secret = "";
+    }
+});
+
+</script>
+
+</body>
+</html>
